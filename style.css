@@ -1,0 +1,22 @@
+/*** Général ***/
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #FF79DA;
+    --filter-bg-color: #99e2D0;
+}
+
+.main-container{
+    width: 100%;
+    min-width: 320px;
+    max-width: 768px;
+}
+
+/*** Logo & Header ***/
+.logo{
+    object-fit: fit;
+    align-items: center;
+}
