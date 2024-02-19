@@ -12,79 +12,104 @@
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0faa74c727.js" crossorigin="anonymous" ></script>
         <title> La palette du goût</title>
-        <link href="all.css" rel="stylemenu">
-        <link href=.css/stylemenu.css rel="stylemenu" >
+        <link href="all.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/stylemenu.css">
     </head>
 
-<section>
-    <header>
-        <div>
-            <i class="fa-solid fa-arrow-left"></i> <img src="./images/Images et textes Ohmyfood/images/logo/ohmyfood.png" 
-            alt="Logo du site">
-        </div>
-        <div>
-            <img class="" src="./images/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
-        </div>
-    </header>
-</section>
-<section>
-    <div>
-        <h1> La palette du goût <i class="fa-regular fa-heart"></i> </h1>
-    </div>
+<body>
+    <div class="main-container">
+            <header>
+                <div>
+                    <a href="./index.html"> <i class="fa-solid fa-arrow-left header__icon"></i></a> 
+                    <img src="./images/Images et textes Ohmyfood/images/logo/ohmyfood.png" 
+                    alt="Logo du site" class="header__logo"> 
+                </div>
+                <div>
+                    <img class="header__image" src="./images/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                </div>
+            </header>
+            
+        <main>
+            <div class="blocmenu">
+                <section>
+                    <div class="blocmenu_title">
+                        <h1> La palette du goût <i class="fa-regular fa-heart"></i> </h1>
+                    </div>
 
-    <div>
-        <h2> ENTRÉES </h2> 
-        <article class="card restocard">
-            <h3>Fricassée d'escargots</h3>
-            <p>Au piment d'Espelette<span> 25€</span></p> 
-        </article>
-        <article class="card restocard">
-            <h3>Foie gras de canard mi-cuit</h3>
-            <p>Et ses copeaux de truffe noire <span> 35€</span></p>
-        </article>
-        <article class="card restocard">
-            <h3>Œuf au plat</h3>
-            <p>Assaisonné à la truffe sur lit de caviar <span> 20€</span></p>
-        </article>
-    </div>
-</section>
+                    <div>
+                        <h2> ENTRÉES </h2> 
+                        <article class="blocmenu__card">
+                            <h3>Fricassée d'escargots</h3>
+                            <p>Au piment d'Espelette 
+                            <p class="blocmenu__euro"> 25€ </p> 
+                        </article>
 
-<section>
-    <div>
-        <h2> PLATS </h2>
-        <article class="card restocard">
-            <h3>Filet de bœuf aux herbes</h3>
-            <p>Accompagné de sa ribambelle de légumes <span> 40€</span></p>
-        </article>
-        <article class="card restocard">
-            <h3>Parmentier de queue de bœuf</h3>
-            <p>À la truffe noire sur sa purée de panais <span> 35€</span></p>
-        </article>
-        <article class="card restocard">
-            <h3>Filet de turbot</h3>
-            <p>Aux agrumes <span> 35€</span></p>
-        </article>
-    </div>
-</section>
+                        <article class="blocmenu__card">
+                            <h3>Foie gras de canard mi-cuit</h3>
+                            <p>Et ses copeaux de truffe noire </p>
+                            <p class="blocmenu__euro"> 35€ </p>
+                        </article>
+                    
+                        <article class="blocmenu__card">
+                            <h3>Œuf au plat</h3>
+                            <p>Assaisonné à la truffe sur lit de caviar</p>
+                            <p class="blocmenu__card--euro"> 20€ </p>
+                        </article>
+                    </div>
+                </section>
 
-<section>
-    <div>
-        <h2> DESSERTS </h2> 
-        <article class="card restocard">
-            <h3>Paris-Brest</h3>
-            <p>Revisité<span> 18€</span></p> 
-        </article>
-        <article class="card restocard">
-            <h3>Macaron au chocolat d'exception</h3>
-            <p>Et glace à la vanille de Madagascar <span> 22€</span></p>
-        </article>
-        <article class="card restocard">
-            <h3>Mousse au chocolat</h3>
-            <p>Au piment d'Espelette et à la truffe noire <span> 23€</span></p>
-        </article>
-    </div>
-</section>
+                <section>
+                    <div>
+                        <h2> PLATS </h2>
+                        <article class="blocmenu__card">
+                            <h3>Filet de bœuf aux herbes</h3>
+                            <p>Accompagné de sa ribambelle de légumes <span> 40€</span></p>
+                        </article>
 
-<div>
-    <input type="submit" value="Commander" class="button">
-</div>
+                        <article class="blocmenu__card">
+                            <h3>Parmentier de queue de bœuf</h3>
+                            <p>À la truffe noire sur sa purée de panais <span> 35€</span></p>
+                        </article>
+
+                        <article class="blocmenu__card">
+                            <h3>Filet de turbot</h3>
+                            <p>Aux agrumes <span> 35€</span></p>
+                        </article>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <h2> DESSERTS </h2> 
+                        <article class="blocmenu__card">
+                            <h3>Paris-Brest</h3>
+                            <p>Revisité<span> 18€</span></p> 
+                        </article>
+
+                        <article class="blocmenu__card">
+                            <h3>Macaron au chocolat d'exception</h3>
+                            <p>Et glace à la vanille de Madagascar <span> 22€</span></p>
+                        </article>
+
+                        <article class="blocmenu__card">
+                            <h3>Mousse au chocolat</h3>
+                            <p>Au piment d'Espelette et à la truffe noire <span> 23€</span></p>
+                        </article>
+                    </div>
+                </section>
+                <div>
+                    <input type="submit" value="Commander" class="button">
+                </div>
+            </div>
+        </main>
+            <footer class="footer">
+                <h3 class="footer__h3"> ohmyfood <h3>
+                    <a href="" class="footer__link"> <p> <i class="fa-solid fa-utensils"></i> Proposer un restaurant </p></a>
+                    <a href="" class="footer__link"> <p> <i class="fa-regular fa-handshake"></i> Devenir partenaire </p></a>
+                <p> Mentions légales </p>
+                <p> Contact </p>
+            </footer>
+    </div>    
+</body>
+</html>
