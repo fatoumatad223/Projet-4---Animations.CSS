@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /**************** GÉNÉRAL ***************/
 body {
   font-family: "Roboto", sans-serif;
@@ -19,7 +18,7 @@ body {
 }
 
 /* Ceci est mon bloc header */
-.logo {
+.header__logo {
   width: 65%;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -27,45 +26,45 @@ body {
 }
 
 /* Ceci est mon bloc de recherche ville */
-.caseville{
+.caseville {
+  border: 0;
+  margin-bottom: 5px;
+  color: black;
+  font-weight: bold;
   width: 100%;
+  height: 50px;
+  box-shadow: 0px -1px 5px 2px rgb(130, 124, 124);
   background-color: #EAEAEA;
-
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .caseville__point {
   color: #353535;
   text-align: center;
+  padding-left: 50px;
 }
 
 .caseville__search {
   border: 1px #EAEAEA;
-  height: 40px;
   background-color: #EAEAEA;
-  color:#353535;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+  padding: 15px;
+  color: #353535;
 }
 
 /* Ceci est mon bloc introduction */
 .blocintro {
   background-color: #F2F2F2;
   text-align: center;
-  margin-bottom: 30px;
-  padding: 50px;
+  padding: 15px;
 }
 
 .blocintro__button {
-  border: 0px;
+  border: 1px solid;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
-  height: 50px;
-  width: 60%;
+  height: 55px;
+  width: 50%;
   color: white;
-  padding-top: 15px;
-  padding-bottom: 30px;
+  margin: 20px;
 }
 
 /* Ceci est mon bloc fonctionnement */
@@ -74,8 +73,8 @@ body {
   margin-top: 40px;
 }
 
-.blocfonction__flex{
-  padding-bottom: 30px;
+.blocfonction__flex {
+  padding-bottom: 50px;
 }
 
 .blocfonction__number {
@@ -83,7 +82,7 @@ body {
   color: white;
   text-align: center;
   position: relative;
-  bottom: -40px;
+  bottom: -60px;
   left: -5px;
   border-radius: 50%;
   width: 30px;
@@ -94,6 +93,7 @@ body {
   margin-right: 10px;
   margin-left: 10px;
   padding-left: 20px;
+  justify-items: center;
   color: gray;
 }
 
@@ -102,21 +102,23 @@ body {
 }
 
 .blocfonction__bordure {
-  margin: -20px;
-  margin-left: 1px;
+  margin-left: 2px;
+  margin-bottom: -30px;
   border-radius: 20px;
-  height: 40px;
+  width: 87%;
   background-color: #F2F2F2;
-  padding-top: 20px;
-  padding-left: 30px;
-  font-size: 17px;
-  width: 90%;
+  padding: 20px;
+}
+
+p.blocfonction__bordure {
+  margin-top: 0px;
 }
 
 /* Ceci est mon bloc restaurants */
 .blocrestau {
+  width: 100%;
   background-color: #F2F2F2;
-  padding-left: 15px;
+  padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 30px;
   margin-top: 40px;
@@ -124,54 +126,53 @@ body {
 
 .blocrestau__card {
   width: 95%;
-  background-color: white;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 20px;
   padding-bottom: 1px;
+  background-color: white;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .blocrestau img {
+  object-fit: cover;
   height: 200px;
   width: 100%;
-  object-fit: cover;
-  border-top-left-radius: 20px;
+  height: 120px;
   border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.blocrestau__card title {
+  font-size: 16px;
 }
 
 .blocrestau .card-nouveau {
   position: absolute;
   top: 0px;
   right: 20px;
-  background-color: #99ECD0;
+  background-color: #99e2D0;
   color: #008766;
   width: 20%;
   padding: 5px;
   text-align: center;
 }
 
-.blocrestau__card--txt{
-  font-size: 16px;
-  padding-left: 10px;
-}
-
-.blocrestau__card a{
+.blocrestau__card a {
   text-decoration: none;
   color: black;
 }
 
-.blocrestau__card .card-title{
-  font-weight: bold;
-  margin-top: 10px;
+.blocrestau__card--txt {
+  font-size: 16px;
+  padding-left: 10px;
 }
 
-.blocrestau__card .card-subtitle{
+.blocrestau__card .card-subtitle {
   margin-top: -10px;
 }
 
-.blocrestau__heart:hover{
+.blocrestau__heart:hover {
   color: #9356DC;
-  
 }
 
 .buttonheart {
@@ -183,32 +184,33 @@ body {
   background-color: white;
 }
 
-.buttonheart__solid{
+.buttonheart__solid {
   opacity: 0;
 }
 
-.buttonheart__solid:hover{
+.buttonheart__solid:hover {
   opacity: 1;
   color: transparent;
-  background-image: linear-gradient(#9356DC,#FF79DA);
-  -webkit-background-clip: text;
+  background-image: linear-gradient(#9356DC, #ff79DA);
+  background-clip: text;
 }
 
 /* Ceci est mon bloc footer*/
 .footer {
   background-color: #353535;
   color: white;
-  padding: 15px;
+  padding: 25px;
 }
 
-.footer__h3{
+.footer__h3 {
   font-family: Shrikhand;
   padding-bottom: 15px;
   font-size: 24px;
 }
 
-.footer__link{
+.footer__link {
   color: white;
   text-decoration: none;
 }
 
+/*# sourceMappingURL=style.css.map */

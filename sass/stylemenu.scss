@@ -18,7 +18,7 @@ body {
 }
 
 /* Ceci est mon bloc header */
-.header__icon {
+.header__icon{
   position: relative;
   bottom: 40px;
   padding-left: 10px;
@@ -33,14 +33,14 @@ body {
   padding-left: 40px;
 }
 
-.header__image {
+.header__image{
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
 /* Ceci est mon bloc menu */
-.blocmenu {
+.blocmenu{
   width: 100%;
   padding-top: 20px;
   background-color: #F2F2F2;
@@ -52,48 +52,48 @@ body {
   margin-block-end: -35px;
 }
 
-.blocmenu_title {
+.blocmenu_title{
   font-family: shrikhand;
   font-size: 20px;
   margin-left: 10px;
 }
 
-.blocmenu h2 {
-  margin-left: 10px;
-  padding-top: 25px;
+.blocmenu h2{
+    margin-left: 10px;
+    padding-top: 25px;
+  }
+
+.fa-heart{
+    padding-left: 45px 
 }
 
-.fa-heart {
-  padding-left: 45px;
+.green-border{
+    border-bottom: 3px solid #99e2D0;
+}
+  
+.blocmenu__card{
+    display: flex;
+    width: 90%;
+    border: 1px solid white;
+    background-color: white;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-radius: 20px;
 }
 
-.green-border {
-  border-bottom: 3px solid #99e2D0;
+.blocmenu__eurobox p{
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.blocmenu__card {
-  display: flex;
-  width: 90%;
-  border: 1px solid white;
-  background-color: white;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 10px;
-  border-radius: 20px;
-}
-
-.blocmenu__eurobox p {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.blocmenu__card--euro {
+.blocmenu__card--euro{
   position: absolute;
   right: 30px;
 }
 
-.blocmenu__eurobox {
-  display: flex;
+.blocmenu__eurobox{
+    display: flex;
 }
 
 /*
@@ -107,8 +107,9 @@ body {
     background-color: #99e2D0;
 }
 */
+
 /* Ceci est mon bloc button */
-.button {
+.button{
   border: 0px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
@@ -127,15 +128,13 @@ body {
   padding: 25px;
 }
 
-.footer__h3 {
+.footer__h3{
   font-family: Shrikhand;
   padding-bottom: 15px;
   font-size: 24px;
 }
 
-.footer__link {
+.footer__link{
   color: white;
   text-decoration: none;
 }
-
-/*# sourceMappingURL=stylemenu.css.map */
