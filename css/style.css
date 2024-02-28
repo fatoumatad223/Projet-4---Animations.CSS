@@ -6,9 +6,9 @@ body {
 }
 
 :root {
-  --main-color: #9356DC;
-  --main-bg-color: #FF79DA;
-  --filter-bg-color: #99e2D0;
+  --main-color: #9356DC
+  --main-bg-color: #FF79DA
+  --filter-bg-color: #99e2D0 ;
 }
 
 .main-container {
@@ -36,14 +36,12 @@ body {
   box-shadow: 0px -1px 5px 2px rgb(130, 124, 124);
   background-color: #EAEAEA;
 }
-
-.caseville__point {
+.caseville .caseville__point {
   color: #353535;
   text-align: center;
   padding-left: 50px;
 }
-
-.caseville__search {
+.caseville .caseville__point .caseville__search {
   border: 1px #EAEAEA;
   background-color: #EAEAEA;
   padding: 15px;
@@ -56,7 +54,6 @@ body {
   text-align: center;
   padding: 15px;
 }
-
 .blocintro__button {
   border: 1px solid;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -66,17 +63,19 @@ body {
   color: white;
   margin: 20px;
 }
+.blocintro__button:hover {
+  opacity: 0.7;
+  box-shadow: 0px -1px 5px 2px rgb(130, 124, 124);
+}
 
 /* Ceci est mon bloc fonctionnement */
 .blocfonction {
   margin-left: 10px;
   margin-top: 40px;
 }
-
 .blocfonction__flex {
   padding-bottom: 50px;
 }
-
 .blocfonction__number {
   background-color: #9356DC;
   color: white;
@@ -88,7 +87,6 @@ body {
   width: 30px;
   height: 25px;
 }
-
 .blocfonction__icone {
   margin-right: 10px;
   margin-left: 10px;
@@ -96,11 +94,9 @@ body {
   justify-items: center;
   color: gray;
 }
-
 .blocfonction__icone:hover {
   color: #9356DC;
 }
-
 .blocfonction__bordure {
   margin-left: 2px;
   margin-bottom: -30px;
