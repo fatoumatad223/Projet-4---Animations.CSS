@@ -5,24 +5,21 @@ body {
   margin: 0;
 }
 
-:root {
-  --main-color: #9356DC
-  --main-bg-color: #FF79DA
-  --filter-bg-color: #99e2D0 ;
-}
-
 .main-container {
   width: 100%;
   min-width: 320px;
   max-width: 768px;
 }
 
+/* Mes mixins */
+/*
+
 /* Ceci est mon bloc header */
 .header__logo {
-  width: 65%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 60px;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 25%;
 }
 
 /* Ceci est mon bloc de recherche ville */
@@ -33,15 +30,15 @@ body {
   font-weight: bold;
   width: 100%;
   height: 50px;
-  box-shadow: 0px -1px 5px 2px rgb(130, 124, 124);
+  box-shadow: 0px 0px 10px 0px rgb(130, 124, 124);
   background-color: #EAEAEA;
 }
-.caseville .caseville__point {
+.caseville__point {
   color: #353535;
   text-align: center;
   padding-left: 50px;
 }
-.caseville .caseville__point .caseville__search {
+.caseville__search {
   border: 1px #EAEAEA;
   background-color: #EAEAEA;
   padding: 15px;
@@ -55,8 +52,9 @@ body {
   padding: 15px;
 }
 .blocintro__button {
-  border: 1px solid;
+  border: 0px;
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 50px;
   height: 55px;
   width: 50%;
@@ -65,7 +63,7 @@ body {
 }
 .blocintro__button:hover {
   opacity: 0.7;
-  box-shadow: 0px -1px 5px 2px rgb(130, 124, 124);
+  box-shadow: 0px 0px 10px 0px rgb(130, 124, 124);
 }
 
 /* Ceci est mon bloc fonctionnement */
@@ -73,37 +71,41 @@ body {
   margin-left: 10px;
   margin-top: 40px;
 }
+.blocfonction h2 {
+  margin-bottom: -30px;
+}
 .blocfonction__flex {
   padding-bottom: 50px;
 }
-.blocfonction__number {
+.blocfonction__flex__number {
   background-color: #9356DC;
   color: white;
   text-align: center;
   position: relative;
-  bottom: -60px;
+  top: 60px;
   left: -5px;
   border-radius: 50%;
   width: 30px;
   height: 25px;
 }
-.blocfonction__icone {
-  margin-right: 10px;
-  margin-left: 10px;
-  padding-left: 20px;
-  justify-items: center;
-  color: gray;
-}
-.blocfonction__icone:hover {
-  color: #9356DC;
-}
-.blocfonction__bordure {
+.blocfonction__flex__bordure {
   margin-left: 2px;
   margin-bottom: -30px;
   border-radius: 20px;
   width: 87%;
   background-color: #F2F2F2;
   padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgb(130, 124, 124);
+}
+.blocfonction__flex__icone {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 20px;
+  justify-items: center;
+  color: gray;
+}
+.blocfonction__flex__icone:hover {
+  color: #9356DC;
 }
 
 p.blocfonction__bordure {
@@ -119,75 +121,68 @@ p.blocfonction__bordure {
   padding-bottom: 30px;
   margin-top: 40px;
 }
-
+.blocrestau h2 {
+  margin-bottom: 10px;
+}
 .blocrestau__card {
   width: 95%;
+  margin-top: 15px;
   margin-bottom: 20px;
   border-radius: 20px;
   padding-bottom: 1px;
   background-color: white;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
-.blocrestau img {
+.blocrestau__card img {
   object-fit: cover;
   height: 200px;
   width: 100%;
-  height: 120px;
+  height: 150px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
-
-.blocrestau__card title {
-  font-size: 16px;
+.blocrestau__card a {
+  text-decoration: none;
+  color: black;
 }
-
-.blocrestau .card-nouveau {
+.blocrestau__card--txt {
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.blocrestau__card--txt .card-subtitle {
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+.blocrestau__card--txt .card-nouveau {
   position: absolute;
   top: 0px;
   right: 20px;
-  background-color: #99e2D0;
+  background-color: #99E2D0;
   color: #008766;
   width: 20%;
   padding: 5px;
   text-align: center;
 }
 
-.blocrestau__card a {
-  text-decoration: none;
-  color: black;
-}
-
-.blocrestau__card--txt {
-  font-size: 16px;
-  padding-left: 10px;
-}
-
-.blocrestau__card .card-subtitle {
-  margin-top: -10px;
-}
-
-.blocrestau__heart:hover {
-  color: #9356DC;
-}
-
+/* Ceci est mon boutton coeur */
 .buttonheart {
   font-size: 30px;
   position: absolute;
   right: 20px;
-  bottom: 30px;
+  bottom: 20px;
   border: none;
   background-color: white;
+  transition-property: all;
+  transition-duration: 2s;
 }
-
 .buttonheart__solid {
   opacity: 0;
 }
-
 .buttonheart__solid:hover {
   opacity: 1;
   color: transparent;
-  background-image: linear-gradient(#9356DC, #ff79DA);
+  background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
 }
 
@@ -195,15 +190,14 @@ p.blocfonction__bordure {
 .footer {
   background-color: #353535;
   color: white;
-  padding: 25px;
+  padding: 15px;
+  width: 95%;
 }
-
 .footer__h3 {
   font-family: Shrikhand;
   padding-bottom: 15px;
   font-size: 24px;
 }
-
 .footer__link {
   color: white;
   text-decoration: none;

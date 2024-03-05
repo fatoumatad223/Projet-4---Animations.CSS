@@ -1,15 +1,16 @@
 @charset "UTF-8";
+
 /**************** GÉNÉRAL ***************/
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
-:root {
-  --main-color: #9356DC;
-  --main-bg-color: #FF79DA;
-  --filter-bg-color: #99e2D0;
-}
+    $main-color: #9356DC;
+    $second-color: #FF79DA;
+    $third-color: #99E2D0;
+    $font-color: #EAEAEA;
+    $footer-color: #353535;
 
 .main-container {
   width: 100%;
@@ -17,127 +18,204 @@ body {
   max-width: 768px;
 }
 
+/* Mes mixins */
+@mixin card-shadow{
+    box-shadow: -1px 2px 2px rgba(130, 124, 124);
+    }
+
+/* Ceci est ma partie loader*/ 
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 1;
+    background-color: #F2F2F2;
+    height: 105vh;
+        &__spinner{
+            font-size: 50px;
+            color: $main-color;
+            background: linear-gradient($third-color, $second-color);
+        }
+    animation: disappear 1s forwards;
+    animation-delay: 3s;
+    transform-origin: left;
+        @keyframes disappear{
+            to{
+                transform: scale(0);
+            }
+        }
+    &__spinner{
+        animation: spin 3s infinite linear; 
+        /*animation : name / duration / iteration-count / timing-function  */
+    }
+        @keyframes spin{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+      
+
+    &__text{
+        font-family: Shrikhand;
+        font-size: 2em;
+        color: $main-color;
+    }
+}
+
 /* Ceci est mon bloc header */
 .header__icon{
   position: relative;
-  bottom: 40px;
+  bottom: 23px;
   padding-left: 10px;
-  font-size: 30px;
+  font-size: 25px;
   color: black;
 }
-
+  
 .header__logo {
-  width: 65%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 40px;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15%;
 }
 
 .header__image{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 /* Ceci est mon bloc menu */
 .blocmenu{
-  width: 100%;
-  padding-top: 20px;
-  background-color: #F2F2F2;
-  position: relative;
-  top: -35px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  margin-bottom: 20px;
-  margin-block-end: -35px;
+    width: 100%;
+    padding-top: 20px;
+    background-color: #F2F2F2;
+    position: relative;
+    top: -35px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-bottom: 20px;
+    margin-block-end: -35px;
+        &__title{
+        font-family: shrikhand;
+        font-size: 20px;
+        margin-left: 10px;
+        }
+        & h2{
+            margin-left: 10px;
+            padding-top: 15px;
+        }
+        & h3{
+            margin-top: 15px;;
+        }
+        &__card{
+            width: 90%;
+            height: 65px;
+            border: 1px solid white;
+            background-color: white;
+            margin-bottom: 15px;
+            margin-left: 10px;
+            padding-left: 10px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            @include card-shadow;
+            overflow: hidden;
+                &:hover{
+                    margin-right: 50px;
+                }
+        &__description{
+            margin-top: -5px;
+            & .card-title{
+                margin-top: 15px;
+            }
+            & .card-subtitle{
+                margin-top: -15px;
+                font-size: 0.8em;
+            }
+        }
+        &__flex{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: -50px;
+                &:hover {
+                    margin-right: 0;
+                }
+            &__price{
+                margin-top: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
 }
 
-.blocmenu_title{
-  font-family: shrikhand;
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-.blocmenu h2{
-    margin-left: 10px;
-    padding-top: 25px;
-  }
-
-.fa-heart{
-    padding-left: 45px 
-}
-
-.green-border{
-    border-bottom: 3px solid #99e2D0;
-}
-  
-.blocmenu__card{
-    display: flex;
-    width: 90%;
-    border: 1px solid white;
-    background-color: white;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    padding-left: 10px;
-    border-radius: 20px;
-}
-
-.blocmenu__eurobox p{
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.blocmenu__card--euro{
-  position: absolute;
-  right: 30px;
-}
-
-.blocmenu__eurobox{
-    display: flex;
-}
-
-/*
+/* Ceci est ma partie checkbox */
 .checkbox{
     border: 1px solid white;
     background-color: white;
     border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 15px;
+    padding: 2px;
+    &__font{
+        background-color: $third-color;
+        width:50px;
+    }
 }
 
-.checkbox-font{
-    background-color: #99e2D0;
+.buttonheart{
+    font-size: 30px;
+    position: absolute;
+    right: 40px;
+    top: 50px;
+    border: none;
+    transition-property: all;
+    transition-duration: 2s;
+    &_solid{
+        opacity: 0;
+        &:hover{
+            opacity: 1;
+            color: transparent;
+            background-image: linear-gradient($second-color, $main-color);
+            background-clip: text;
+        }
+    }
 }
-*/
+
+.green-border{
+    border-bottom: 3px solid $third-color;
+}
 
 /* Ceci est mon bloc button */
-.button{
-  border: 0px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 50px;
-  height: 50px;
-  width: 50%;
-  color: white;
-  margin-bottom: 40px;
-  margin-top: 30px;
-  margin-left: 100px;
-  &:hover {
-    opacity: 0.7;
-    }
+.btn{
+    border: 0px;
+    background: linear-gradient($second-color, $main-color);
+    border-radius: 50px;
+    height: 50px;
+    width: 50%;
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-left: 100px;
+    &:hover {
+        opacity: 0.7;
+        }
 }
 
 /* Ceci est mon footer */
 .footer {
-  background-color: #353535;
+  background-color: $footer-color;
   color: white;
   padding: 25px;
-}
-
-.footer__h3{
-  font-family: Shrikhand;
-  padding-bottom: 15px;
-  font-size: 24px;
-}
-
-.footer__link{
-  color: white;
-  text-decoration: none;
+    &__h3{
+        font-family: Shrikhand;
+        padding-bottom: 15px;
+        font-size: 24px;
+    }
+    &__link{
+        color: white;
+        text-decoration: none;
+    }
 }

@@ -5,32 +5,67 @@ body {
   margin: 0;
 }
 
-:root {
-  --main-color: #9356DC;
-  --main-bg-color: #FF79DA;
-  --filter-bg-color: #99e2D0;
-}
-
 .main-container {
   width: 100%;
   min-width: 320px;
   max-width: 768px;
 }
 
+/* Mes mixins */
+/* Ceci est ma partie loader*/
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 1;
+  background-color: #F2F2F2;
+  height: 105vh;
+  animation: disappear 1s forwards;
+  animation-delay: 3s;
+  transform-origin: left;
+}
+.loader__spinner {
+  font-size: 50px;
+  color: #9356DC;
+  background: linear-gradient(#99E2D0, #FF79DA);
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+.loader__spinner {
+  animation: spin 3s infinite linear;
+  /*animation : name / duration / iteration-count / timing-function  */
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader__text {
+  font-family: Shrikhand;
+  font-size: 2em;
+  color: #9356DC;
+}
+
 /* Ceci est mon bloc header */
 .header__icon {
   position: relative;
-  bottom: 40px;
+  bottom: 23px;
   padding-left: 10px;
-  font-size: 30px;
+  font-size: 25px;
   color: black;
 }
 
 .header__logo {
-  width: 65%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 40px;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 15%;
 }
 
 .header__image {
@@ -51,64 +86,97 @@ body {
   margin-bottom: 20px;
   margin-block-end: -35px;
 }
-
-.blocmenu_title {
+.blocmenu__title {
   font-family: shrikhand;
   font-size: 20px;
   margin-left: 10px;
 }
-
 .blocmenu h2 {
   margin-left: 10px;
-  padding-top: 25px;
+  padding-top: 15px;
 }
-
-.fa-heart {
-  padding-left: 45px;
+.blocmenu h3 {
+  margin-top: 15px;
 }
-
-.green-border {
-  border-bottom: 3px solid #99e2D0;
-}
-
 .blocmenu__card {
-  display: flex;
   width: 90%;
+  height: 65px;
   border: 1px solid white;
   background-color: white;
   margin-bottom: 15px;
   margin-left: 10px;
   padding-left: 10px;
   border-radius: 20px;
-}
-
-.blocmenu__eurobox p {
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: space-between;
+  box-shadow: -1px 2px 2px rgb(130, 124, 124);
+  overflow: hidden;
+}
+.blocmenu__card:hover {
+  margin-right: 50px;
+}
+.blocmenu__card__description {
+  margin-top: -5px;
+}
+.blocmenu__card__description .card-title {
+  margin-top: 15px;
+}
+.blocmenu__card__description .card-subtitle {
+  margin-top: -15px;
+  font-size: 0.8em;
+}
+.blocmenu__card__flex {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -50px;
+}
+.blocmenu__card__flex:hover {
+  margin-right: 0;
+}
+.blocmenu__card__flex__price {
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
-.blocmenu__card--euro {
+/* Ceci est ma partie checkbox */
+.checkbox {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 6px;
+  margin-left: 15px;
+  padding: 2px;
+}
+.checkbox__font {
+  background-color: #99E2D0;
+  width: 50px;
+}
+
+.buttonheart {
+  font-size: 30px;
   position: absolute;
-  right: 30px;
+  right: 40px;
+  top: 50px;
+  border: none;
+  transition-property: all;
+  transition-duration: 2s;
+}
+.buttonheart_solid {
+  opacity: 0;
+}
+.buttonheart_solid:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
 }
 
-.blocmenu__eurobox {
-  display: flex;
+.green-border {
+  border-bottom: 3px solid #99E2D0;
 }
 
-/*
-.checkbox{
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 50%;
-}
-
-.checkbox-font{
-    background-color: #99e2D0;
-}
-*/
 /* Ceci est mon bloc button */
-.button {
+.btn {
   border: 0px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
@@ -119,7 +187,7 @@ body {
   margin-top: 30px;
   margin-left: 100px;
 }
-.button:hover {
+.btn:hover {
   opacity: 0.7;
 }
 
@@ -129,13 +197,11 @@ body {
   color: white;
   padding: 25px;
 }
-
 .footer__h3 {
   font-family: Shrikhand;
   padding-bottom: 15px;
   font-size: 24px;
 }
-
 .footer__link {
   color: white;
   text-decoration: none;

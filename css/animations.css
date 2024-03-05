@@ -1,0 +1,33 @@
+.blocmenu__card {
+  animation: appear;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+}
+
+@keyframes appear {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+.checkbox__font:hover {
+  animation-duration: 5s;
+  animation-name: checkbox;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes checkbox {
+  from {
+    margin-right: 0%;
+  }
+  to {
+    margin-right: 100%;
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */
