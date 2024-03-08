@@ -1,34 +1,85 @@
 @charset "UTF-8";
 
-// Apparition des cartes //
-.blocmenu__card{
-    animation: appear;
-    animation-duration: 3s;
-    animation-iteration-count: 2;
-}
-    @keyframes appear{
-        from{
-            margin-right: 100%;
-            width: 300%;
+$main-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$font-color: #EAEAEA;
+$footer-color: #353535;
+
+/* Ceci est ma partie loader*/ 
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 1;
+    background-color: #F2F2F2;
+    height: 105vh;
+        &__spinner{
+            font-size: 50px;
+            color: transparent;
+            background: linear-gradient($main-color, $second-color, $third-color);
+            background-clip: text;
         }
-        to{
-            margin-right: 0%;
-            width: 100%;
+    animation: disappear 1s forwards;
+    animation-delay: 3s;
+    transform-origin: left;
+        @keyframes disappear{
+            to{
+                transform: scale(0);
+            }
         }
+    .purple{
+        animation: spin 4s infinite linear, bounce 1s ease-out infinite alternate;
+        /*animation : name / duration / iteration-count / timing-function  */
+    }
+    .pink{
+        animation: spin 4s infinite 0.1s linear, bounce 1.4s ease-out 0.1s infinite alternate;
+        /*animation : name / duration / iteration-count / timing-function  */
+    }
+    .green{
+        animation: spin 4s infinite 0.2s linear, bounce 1.8s ease-out 0.2s infinite alternate;
+        /*animation : name / duration / iteration-count / timing-function  */
     }
 
-// Aller-retour du bouton checkbox //
-.checkbox__font:hover{
-    animation-duration: 5s;
-    animation-name: checkbox;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+        @keyframes spin{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes bounce {
+            to{
+                margin-bottom: 50px;
+            }
+        }
+
+    &__text{
+        font-family: Shrikhand;
+        font-size: 2em;
+        color: $main-color;
+    }
 }
-    @keyframes checkbox{
+
+// Aller-retour du bouton checkbox //
+
+// Apparition des cartes //
+.un{
+    animation: anim-card 2s ease-in;
+}
+.deux{
+    animation: anim-card 3s ease-in;
+}
+.trois{
+    animation: anim-card 4s ease-in;
+}
+
+    @keyframes anim-card{
         from{
-            margin-right: 0%;
+            margin-left: -100%;
         }
         to{
-            margin-right: 100%;
+            margin-left: 0px;
         }
     }

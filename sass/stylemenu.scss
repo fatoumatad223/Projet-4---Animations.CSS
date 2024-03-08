@@ -2,93 +2,50 @@
 
 /**************** GÉNÉRAL ***************/
 body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
 }
 
-    $main-color: #9356DC;
-    $second-color: #FF79DA;
-    $third-color: #99E2D0;
-    $font-color: #EAEAEA;
-    $footer-color: #353535;
+$main-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$font-color: #EAEAEA;
+$footer-color: #353535;
 
 .main-container {
-  width: 100%;
-  min-width: 320px;
-  max-width: 768px;
+    width: 100%;
+    min-width: 320px;
 }
 
 /* Mes mixins */
-@mixin card-shadow{
+@mixin card-shadow {
     box-shadow: -1px 2px 2px rgba(130, 124, 124);
-    }
-
-/* Ceci est ma partie loader*/ 
-.loader{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    opacity: 1;
-    background-color: #F2F2F2;
-    height: 105vh;
-        &__spinner{
-            font-size: 50px;
-            color: $main-color;
-            background: linear-gradient($third-color, $second-color);
-        }
-    animation: disappear 1s forwards;
-    animation-delay: 3s;
-    transform-origin: left;
-        @keyframes disappear{
-            to{
-                transform: scale(0);
-            }
-        }
-    &__spinner{
-        animation: spin 3s infinite linear; 
-        /*animation : name / duration / iteration-count / timing-function  */
-    }
-        @keyframes spin{
-            to{
-                transform: rotate(360deg);
-            }
-        }
-      
-
-    &__text{
-        font-family: Shrikhand;
-        font-size: 2em;
-        color: $main-color;
-    }
 }
 
 /* Ceci est mon bloc header */
-.header__icon{
-  position: relative;
-  bottom: 23px;
-  padding-left: 10px;
-  font-size: 25px;
-  color: black;
-}
-  
-.header__logo {
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 15%;
+.header__icon {
+    position: relative;
+    bottom: 23px;
+    padding-left: 10px;
+    font-size: 25px;
+    color: black;
 }
 
-.header__image{
+.header__logo {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+.header__image {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 250px;
 }
 
 /* Ceci est mon bloc menu */
-.blocmenu{
+.blocmenu {
     width: 100%;
     padding-top: 20px;
     background-color: #F2F2F2;
@@ -98,74 +55,86 @@ body {
     border-top-right-radius: 30px;
     margin-bottom: 20px;
     margin-block-end: -35px;
-        &__title{
+
+    &__title {
         font-family: shrikhand;
-        font-size: 20px;
+        font-size: 1emx;
         margin-left: 10px;
+    }
+
+    & h2 {
+        margin-left: 10px;
+        padding-top: 15px;
+    }
+
+    & h3 {
+        margin-top: 15px;
+    }
+
+    &__card {
+        width: 90%;
+        height: 65px;
+        border: 1px solid white;
+        background-color: white;
+        margin-bottom: 15px;
+        margin-left: 10px;
+        padding-left: 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        @include card-shadow;
+        overflow: hidden;
+        &:hover {
+            margin-right: 50px;
         }
-        & h2{
-            margin-left: 10px;
-            padding-top: 15px;
-        }
-        & h3{
-            margin-top: 15px;;
-        }
-        &__card{
-            width: 90%;
-            height: 65px;
-            border: 1px solid white;
-            background-color: white;
-            margin-bottom: 15px;
-            margin-left: 10px;
-            padding-left: 10px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: space-between;
-            @include card-shadow;
-            overflow: hidden;
-                &:hover{
-                    margin-right: 50px;
-                }
-        &__description{
+
+        &__description {
             margin-top: -5px;
-            & .card-title{
+
+            & .card-title {
                 margin-top: 15px;
             }
-            & .card-subtitle{
+
+            & .card-subtitle {
                 margin-top: -15px;
                 font-size: 0.8em;
             }
         }
-        &__flex{
+
+        &__flex {
             display: flex;
             justify-content: flex-end;
             margin-right: -50px;
-                &:hover {
-                    margin-right: 0;
-                }
-            &__price{
+            transition: 1s;
+
+            &__price {
                 margin-top: 20px;
                 margin-right: 10px;
             }
+        }
+        &:hover &__flex {
+            margin-right: 0;
+            transition: 1s;
         }
     }
 }
 
 /* Ceci est ma partie checkbox */
-.checkbox{
+.checkbox {
     border: 1px solid white;
     background-color: white;
     border-radius: 50%;
     margin-top: 6px;
     margin-left: 15px;
     padding: 2px;
-    &__font{
+
+    &__font {
         background-color: $third-color;
-        width:50px;
+        width: 50px;
     }
 }
 
-.buttonheart{
+.buttonheart {
     font-size: 30px;
     position: absolute;
     right: 40px;
@@ -173,9 +142,11 @@ body {
     border: none;
     transition-property: all;
     transition-duration: 2s;
-    &_solid{
+
+    &_solid {
         opacity: 0;
-        &:hover{
+
+        &:hover {
             opacity: 1;
             color: transparent;
             background-image: linear-gradient($second-color, $main-color);
@@ -184,13 +155,13 @@ body {
     }
 }
 
-.green-border{
+.green-border {
     border-bottom: 3px solid $third-color;
 }
 
 /* Ceci est mon bloc button */
-.btn{
-    border: 0px;
+.btn {
+    border: none;
     background: linear-gradient($second-color, $main-color);
     border-radius: 50px;
     height: 50px;
@@ -198,23 +169,26 @@ body {
     color: white;
     margin-bottom: 40px;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 25%;
+
     &:hover {
         opacity: 0.7;
-        }
+    }
 }
 
 /* Ceci est mon footer */
 .footer {
-  background-color: $footer-color;
-  color: white;
-  padding: 25px;
-    &__h3{
+    background-color: $footer-color;
+    color: white;
+    padding: 25px;
+
+    &__h3 {
         font-family: Shrikhand;
         padding-bottom: 15px;
         font-size: 24px;
     }
-    &__link{
+
+    &__link {
         color: white;
         text-decoration: none;
     }
