@@ -21,10 +21,10 @@ body {
 }
 
 .header__logo {
-  width: 40%;
+  width: 180px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 20%;
+  margin-left: calc(50% - 115px);
 }
 
 .header__image {
@@ -46,6 +46,8 @@ body {
   margin-block-end: -35px;
 }
 .blocmenu__title {
+  display: flex;
+  justify-content: center;
   font-family: shrikhand;
   font-size: 1emx;
   margin-left: 10px;
@@ -54,11 +56,16 @@ body {
   margin-left: 10px;
   padding-top: 15px;
 }
+@media (min-width: 768px) {
+  .blocmenu h2 {
+    margin-left: 15%;
+  }
+}
 .blocmenu h3 {
   margin-top: 15px;
 }
 .blocmenu__card {
-  width: 90%;
+  width: 93%;
   height: 65px;
   border: 1px solid white;
   background-color: white;
@@ -73,6 +80,12 @@ body {
 }
 .blocmenu__card:hover {
   margin-right: 50px;
+}
+@media (min-width: 768px) {
+  .blocmenu__card {
+    width: 70%;
+    margin-left: 15%;
+  }
 }
 .blocmenu__card__description {
   margin-top: -5px;
@@ -113,11 +126,13 @@ body {
   width: 50px;
 }
 
+.coeurs {
+  margin-top: 17px;
+}
+
 .buttonheart {
   font-size: 30px;
   position: absolute;
-  right: 40px;
-  top: 50px;
   border: none;
   transition-property: all;
   transition-duration: 2s;
@@ -142,11 +157,11 @@ body {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
   height: 50px;
-  width: 50%;
+  width: 180px;
   color: white;
   margin-bottom: 40px;
   margin-top: 30px;
-  margin-left: 25%;
+  margin-left: calc(50% - 90px);
 }
 .btn:hover {
   opacity: 0.7;
@@ -166,6 +181,23 @@ body {
 .footer__link {
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .blocmenu {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+  }
+  .blocmenu__title {
+    text-align: center;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=stylemenu.css.map */
