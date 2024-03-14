@@ -64,6 +64,10 @@
   animation: anim-card 4s ease-in;
 }
 
+.quatre {
+  animation: anim-card 5s ease-in;
+}
+
 @keyframes anim-card {
   from {
     margin-left: -100%;

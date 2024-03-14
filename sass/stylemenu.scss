@@ -136,7 +136,6 @@ $footer-color: #353535;
     margin-top: 6px;
     margin-left: 15px;
     padding: 2px;
-
     &__font {
         background-color: $third-color;
         width: 50px;
@@ -191,13 +190,11 @@ $footer-color: #353535;
     background-color: $footer-color;
     color: white;
     padding: 25px;
-
     &__h3 {
         font-family: Shrikhand;
         padding-bottom: 15px;
         font-size: 24px;
     }
-
     &__link {
         color: white;
         text-decoration: none;
