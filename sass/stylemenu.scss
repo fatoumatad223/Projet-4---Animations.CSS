@@ -1,25 +1,27 @@
 @charset "UTF-8";
 
-/**************** GÉNÉRAL ***************/
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
+
+/* Mes mixins */
+@mixin card-shadow {
+    box-shadow: -1px 2px 2px rgba(130, 124, 124);
 }
 
+/* Mes variables */
 $main-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
 $font-color: #EAEAEA;
 $footer-color: #353535;
 
+/* GÉNÉRAL */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
 .main-container {
     width: 100%;
     min-width: 320px;
-}
-
-/* Mes mixins */
-@mixin card-shadow {
-    box-shadow: -1px 2px 2px rgba(130, 124, 124);
 }
 
 /* Ceci est mon bloc header */
@@ -55,7 +57,6 @@ $footer-color: #353535;
     border-top-right-radius: 30px;
     margin-bottom: 20px;
     margin-block-end: -35px;
-
     &__title {
         display: flex;
         justify-content: center;
@@ -63,19 +64,13 @@ $footer-color: #353535;
         font-size: 1emx;
         margin-left: 10px;
     }
-
     & h2 {
         margin-left: 10px;
         padding-top: 15px;
-        @media (min-width: 768px){
-            margin-left: 15%;
-        }
     }
-
     & h3 {
         margin-top: 15px;
     }
-
     &__card {
         width: 93%;
         height: 65px;
@@ -92,30 +87,21 @@ $footer-color: #353535;
         &:hover {
             margin-right: 50px;
         }
-        @media (min-width: 768px){
-            width: 70%;
-            margin-left: 15%;
-        }
-
         &__description {
             margin-top: -5px;
-
             & .card-title {
                 margin-top: 15px;
             }
-
             & .card-subtitle {
                 margin-top: -15px;
                 font-size: 0.8em;
             }
         }
-
         &__flex {
             display: flex;
             justify-content: flex-end;
             margin-right: -50px;
             transition: 1s;
-
             &__price {
                 margin-top: 20px;
                 margin-right: 10px;
@@ -142,8 +128,10 @@ $footer-color: #353535;
     }
 }
 
+/* Partie coeurs */
 .coeurs{
     margin-top: 17px;
+    margin-left: 10px;
 }
 .buttonheart {
     font-size: 30px;
@@ -151,10 +139,8 @@ $footer-color: #353535;
     border: none;
     transition-property: all;
     transition-duration: 2s;
-
     &_solid {
         opacity: 0;
-
         &:hover {
             opacity: 1;
             color: transparent;
@@ -179,7 +165,6 @@ $footer-color: #353535;
     margin-bottom: 40px;
     margin-top: 30px;
     margin-left: calc(50% - 90px);
-
     &:hover {
         opacity: 0.7;
     }
@@ -193,7 +178,6 @@ $footer-color: #353535;
     &__h3 {
         font-family: Shrikhand;
         padding-bottom: 15px;
-        font-size: 24px;
     }
     &__link {
         color: white;
@@ -201,21 +185,35 @@ $footer-color: #353535;
     }
 }
 
-
+/* Mes media queries */
 @media (min-width: 768px) {
     .blocmenu{
         width: 90%;
         margin-left: auto;
         margin-right: auto;
         &__title {
-        text-align: center;
+            text-align: center;
         }
         max-width: 1000px;
+        &__card{
+            width: 70%;
+            margin-left: 15%;
+        }
+        & h2{
+            margin-left: 15%;
+        }
     }
-        .footer{
+    
+    .footer{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        gap: 30px;
+        padding-left: 20%;
+        &__h3{
+            position: absolute;
+            right: 30px;
+            margin-top: 12px;
+        }
     }
 }
 
