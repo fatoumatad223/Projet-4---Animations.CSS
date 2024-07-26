@@ -97,7 +97,7 @@ body {
   background-color: #F2F2F2;
   padding: 20px;
   box-shadow: 0px 0px 10px 0px rgb(130, 124, 124);
-  font-size: 80%;
+  font-size: 1em;
 }
 .blocfonction__flex__bordure p {
   margin-top: 0px;
@@ -203,12 +203,17 @@ body {
 /* Ceci est ma partie media queries */
 @media (min-width: 768px) {
   .blocfonction {
+    width: 100%;
     margin-left: 8%;
   }
   .blocfonction__flex {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
+  }
+  .blocfonction__flex__bordure {
+    width: 80%;
+    font-size: 0.7em;
   }
   .blocrestau__flex {
     display: flex;
@@ -225,14 +230,48 @@ body {
   }
   .footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 10px;
-    padding-left: 40%;
   }
   .footer__h3 {
-    position: absolute;
-    right: 30px;
     margin-top: 12px;
+  }
+  .footer__textes {
+    display: flex;
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .blocfonction {
+    width: 100%;
+    margin-left: 8%;
+  }
+  .blocfonction__flex {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .blocfonction__flex__bordure {
+    width: 90%;
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 1200px) {
+  .blocfonction {
+    width: 100%;
+    margin-left: 8%;
+  }
+  .blocfonction__flex {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+  .blocfonction__flex__number {
+    top: 75px;
+  }
+  .blocfonction__flex__bordure {
+    width: 100%;
+    font-size: 1.3em;
   }
 }
 

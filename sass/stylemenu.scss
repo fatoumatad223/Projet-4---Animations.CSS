@@ -206,15 +206,16 @@ body {
     
     .footer{
         display: flex;
-        flex-direction: row;
-        gap: 30px;
-        padding-left: 20%;
+        flex-direction: row-reverse;
+        gap: 10px;
         &__h3{
-            position: absolute;
-            right: 30px;
             margin-top: 12px;
         }
-    }
+        &__textes{
+            display: flex;
+            gap: 20px;
+        }
+        }
 }
 
 

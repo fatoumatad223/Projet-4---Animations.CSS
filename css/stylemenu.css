@@ -194,14 +194,15 @@ body {
   }
   .footer {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
-    padding-left: 20%;
+    flex-direction: row-reverse;
+    gap: 10px;
   }
   .footer__h3 {
-    position: absolute;
-    right: 30px;
     margin-top: 12px;
+  }
+  .footer__textes {
+    display: flex;
+    gap: 20px;
   }
 }
 

@@ -1,25 +1,26 @@
 /**************** GÉNÉRAL ***************/
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0
 }
 
-    $main-color: #9356DC;
-    $second-color: #FF79DA;
-    $third-color: #99E2D0;
-    $font-color: #EAEAEA;
-    $footer-color: #353535;
+$main-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$font-color: #EAEAEA;
+$footer-color: #353535;
 
-.main-container{
+.main-container {
     width: 100%;
     min-width: 320px;
 }
 
-/* Mes mixins */ 
-@mixin btn-shadow{
-    box-shadow: 0px 0px 10px 0px  rgba(130 124 124);
-    }
+/* Mes mixins */
+@mixin btn-shadow {
+    box-shadow: 0px 0px 10px 0px rgba(130 124 124);
+}
+
 /*
 
 /* Ceci est mon bloc header */
@@ -28,10 +29,10 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: calc(50% - 90px)
-  }
+}
 
 /* Ceci est mon bloc de recherche ville */
-.caseville{
+.caseville {
     border: 0;
     margin-bottom: 5px;
     color: black;
@@ -40,33 +41,37 @@ body{
     height: 50px;
     @include btn-shadow;
     background-color: $font-color;
-    &__point{
+
+    &__point {
         color: $footer-color;
         text-align: center;
         padding-left: 50px;
     }
-        &__search{
-            border: 1px $font-color;
-            background-color: $font-color;
-            padding: 15px;
-            color: $footer-color;
-        }
+
+    &__search {
+        border: 1px $font-color;
+        background-color: $font-color;
+        padding: 15px;
+        color: $footer-color;
+    }
 }
 
 /* Ceci est mon bloc introduction */
-.blocintro{
+.blocintro {
     background-color: #F2F2F2;
     text-align: center;
     padding: 15px;
-    &__button{
+
+    &__button {
         border: 0px;
-        background: linear-gradient($second-color, $main-color); 
+        background: linear-gradient($second-color, $main-color);
         box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
         border-radius: 50px;
         height: 55px;
         width: 15em;
         color: white;
         margin: 20px;
+
         &:hover {
             opacity: 0.7;
             @include btn-shadow;
@@ -75,17 +80,20 @@ body{
 }
 
 /* Ceci est mon bloc fonctionnement */
-.blocfonction{
+.blocfonction {
     margin-left: 10px;
     margin-top: 40px;
-    & h2{
+
+    & h2 {
         margin-bottom: -30px;
-        }
-    &__flex{
+    }
+
+    &__flex {
         display: flex;
         flex-direction: column;
         padding-bottom: 50px;
-        &__number{
+
+        &__number {
             background-color: $main-color;
             color: white;
             text-align: center;
@@ -97,84 +105,95 @@ body{
             height: 25px;
             padding-top: 5px;
         }
-        &__bordure{
+
+        &__bordure {
             margin-right: 10px;
             margin-bottom: -30px;
             border-radius: 20px;
             background-color: #F2F2F2;
             padding: 20px;
             @include btn-shadow;
-            font-size: 80%;
-                p{
-                margin-top: 0px;   
-                }
+            font-size: 1em;
+
+            p {
+                margin-top: 0px;
+            }
         }
-        &__icone{
+
+        &__icone {
             margin-right: 10px;
             margin-left: 10px;
             padding-left: 20px;
             justify-items: center;
             color: gray;
-                &:hover{
-                    color: $main-color;
-                }
+
+            &:hover {
+                color: $main-color;
+            }
         }
-    } 
+    }
 }
 
 /* Ceci est mon bloc restaurants */
-.blocrestau{
+.blocrestau {
     background-color: #F2F2F2;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 30px;
     margin-top: 40px;
-        & h2 {
-            margin-bottom: 10px;
+
+    & h2 {
+        margin-bottom: 10px;
+    }
+
+    &__card {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        border-radius: 20px;
+        padding-bottom: 1px;
+        background-color: white;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+        & img {
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
         }
-        &__card{
-            margin-top: 15px;
-            margin-bottom: 20px;
-            margin-right: 10px;
-            border-radius: 20px;
-            padding-bottom: 1px; 
-            background-color: white;
-            filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-            & img{
-                object-fit: cover;
-                height: 200px;
-                width: 100%;
-                border-top-right-radius: 20px;
-                border-top-left-radius: 20px;
-            } 
-            & a {
-                text-decoration: none;
-                color: black;
+
+        & a {
+            text-decoration: none;
+            color: black;
+        }
+
+        &--txt {
+            font-size: 16px;
+            padding-left: 10px;
+            margin-top: 5px;
+
+            & .card-subtitle {
+                margin-top: -15px;
+                margin-bottom: 10px;
             }
-            &--txt{
-                font-size: 16px;
-                padding-left: 10px;
-                margin-top: 5px;
-                & .card-subtitle{
-                    margin-top: -15px;
-                    margin-bottom: 10px;
-                }
-                & .card-nouveau{
-                    position: absolute;
-                    top: 0px;
-                    right: 20px;
-                    background-color: $third-color;
-                    color: #008766;
-                    width: 20%;
-                    padding: 5px;
-                    text-align: center;
-                }
+
+            & .card-nouveau {
+                position: absolute;
+                top: 0px;
+                right: 20px;
+                background-color: $third-color;
+                color: #008766;
+                width: 20%;
+                padding: 5px;
+                text-align: center;
             }
         }
+    }
 }
 
 /* Ceci est mon boutton coeur */
-.buttonheart{
+.buttonheart {
     font-size: 30px;
     position: absolute;
     right: 20px;
@@ -183,9 +202,11 @@ body{
     background-color: white;
     transition-property: all;
     transition-duration: 2s;
-    &__solid{
+
+    &__solid {
         opacity: 0;
-        &:hover{
+
+        &:hover {
             opacity: 1;
             color: transparent;
             background-image: linear-gradient($main-color, $second-color);
@@ -199,11 +220,13 @@ body{
     background-color: $footer-color;
     color: white;
     padding: 15px;
-    &__h3{
+
+    &__h3 {
         font-family: Shrikhand;
         padding-bottom: 15px;
     }
-    &__link{
+
+    &__link {
         color: white;
         text-decoration: none;
     }
@@ -211,37 +234,90 @@ body{
 
 /* Ceci est ma partie media queries */
 @media (min-width: 768px) {
-.blocfonction{
-    margin-left: 8%;
-    &__flex {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-    
+    .blocfonction {
+        width: 100%;
+        margin-left: 8%;
+
+        &__flex {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            &__bordure {
+                width: 80%;
+                font-size: 0.7em;
+            }
         }
     }
-.blocrestau__flex{
+
+    .blocrestau__flex {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 30px;
         padding-left: 7%;
-}
-.blocrestau h2 {
+    }
+
+    .blocrestau h2 {
         margin-left: 7%;
     }
-.blocrestau__card{
+
+    .blocrestau__card {
         width: 45%;
     }
-.footer{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding-left: 40%;
-    &__h3{
-        position: absolute;
-        right: 30px;
-        margin-top: 12px;
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+
+        &__h3 {
+            margin-top: 12px;
+        }
+
+        &__textes {
+            display: flex;
+            gap: 20px;
+        }
     }
+}
+
+@media (min-width: 1024px) {
+    .blocfonction {
+        width: 100%;
+        margin-left: 8%;
+
+        &__flex {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
+            &__bordure {
+                width: 90%;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .blocfonction {
+        width: 100%;
+        margin-left: 8%;
+
+        &__flex {
+            display: flex;
+            flex-direction: row;
+            gap: 80px;
+
+            &__number {
+                top: 75px;
+            }
+
+            &__bordure {
+                width: 100%;
+                font-size: 1.3em;
+            }
+        }
     }
 }
