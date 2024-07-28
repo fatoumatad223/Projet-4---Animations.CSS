@@ -109,7 +109,7 @@ body {
   justify-items: center;
   color: gray;
 }
-.blocfonction__flex__icone:hover {
+p:hover .blocfonction__flex__icone {
   color: #9356DC;
 }
 
@@ -209,6 +209,7 @@ body {
   .blocfonction__flex {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 20px;
   }
   .blocfonction__flex__bordure {
@@ -249,14 +250,17 @@ body {
   .blocfonction__flex {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 50px;
+  }
+  .blocfonction__flex .contain {
+    width: 25%;
   }
   .blocfonction__flex__bordure {
     width: 90%;
     font-size: 0.9em;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .blocfonction {
     width: 100%;
     margin-left: 8%;
@@ -264,7 +268,10 @@ body {
   .blocfonction__flex {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 60px;
+  }
+  .blocfonction__flex .contain {
+    width: 25%;
   }
   .blocfonction__flex__number {
     top: 70px;
