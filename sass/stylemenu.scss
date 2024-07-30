@@ -94,7 +94,7 @@ body {
 
         &__description {
             margin-top: -5px;
-            width: 60%;
+            width: 100%;
 
             & .card-title {
                 margin-top: 15px;
@@ -102,7 +102,7 @@ body {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: 60%;
+                width: calc(100% - 35px);
 
             }
 
@@ -112,13 +112,14 @@ body {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: 100%;
+                width: calc(100% - 35px);
             }
         }
 
         &__flex {
             display: flex;
             justify-content: flex-end;
+            width: 90px;
             margin-right: -50px;
             transition: 1s;
 

@@ -78,7 +78,7 @@ body {
 }
 .blocmenu__card__description {
   margin-top: -5px;
-  width: 60%;
+  width: 100%;
 }
 .blocmenu__card__description .card-title {
   margin-top: 15px;
@@ -86,7 +86,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 60%;
+  width: calc(100% - 35px);
 }
 .blocmenu__card__description .card-subtitle {
   margin-top: 40px;
@@ -94,11 +94,12 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
+  width: calc(100% - 35px);
 }
 .blocmenu__card__flex {
   display: flex;
   justify-content: flex-end;
+  width: 90px;
   margin-right: -50px;
   transition: 1s;
 }
