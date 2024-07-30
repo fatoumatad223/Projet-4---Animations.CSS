@@ -29,7 +29,8 @@ body {
 }
 
 .header__image {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 250px;
 }
@@ -50,13 +51,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: shrikhand;
-}
-.blocmenu__title h1 {
-  font-size: 1.4em;
-}
-.blocmenu__title .coeurs {
-  margin-top: 17px;
-  margin-left: 10px;
+  font-size: 1em;
 }
 .blocmenu h2 {
   margin-left: 10px;
@@ -84,27 +79,22 @@ body {
 }
 .blocmenu__card__description {
   margin-top: -5px;
-  width: 70%;
+  width: 100%;
 }
 .blocmenu__card__description .card-title {
   margin-top: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
-}
-.blocmenu__card__description .card-title :hover {
-  width: calc(100% - 200px);
+  width: calc(100% - 35px);
 }
 .blocmenu__card__description .card-subtitle {
-  margin-top: -15px;
+  margin-top: 40px;
+  font-size: 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
-}
-.blocmenu__card__description .card-subtitle :hover {
-  width: calc(100% - 250px);
+  width: calc(100% - 35px);
 }
 .blocmenu__card__flex {
   display: flex;
@@ -118,7 +108,7 @@ body {
   margin-right: 10px;
 }
 .blocmenu__card:hover .blocmenu__card__flex {
-  margin-right: 0px;
+  margin-right: 0;
   transition: 1s;
 }
 
@@ -137,9 +127,13 @@ body {
 }
 
 /* Partie coeurs */
+.coeurs {
+  margin-top: 17px;
+  margin-left: 10px;
+}
+
 .buttonheart {
   font-size: 30px;
-  position: absolute;
   border: none;
   transition-property: all;
   transition-duration: 2s;
@@ -151,7 +145,8 @@ body {
   opacity: 1;
   color: transparent;
   background-image: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .green-border {
@@ -218,6 +213,4 @@ body {
     display: flex;
     gap: 20px;
   }
-}
-
-/*# sourceMappingURL=stylemenu.css.map */
+}/*# sourceMappingURL=stylemenu.css.map */

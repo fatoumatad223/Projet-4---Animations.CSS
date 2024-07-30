@@ -1,8 +1,12 @@
 /**************** GÉNÉRAL ***************/
 
+// * {
+//     border: 1px solid red;
+// }
+
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0
+    margin: 0;
 }
 
 $main-color: #9356DC;
@@ -238,9 +242,8 @@ $footer-color: #353535;
 /* Ceci est ma partie media queries */
 @media (min-width: 768px) {
     .blocfonction {
-        width: 100%;
+        // width: 100%;
         margin-left: 8%;
-
 
         &__flex {
             display: flex;
@@ -293,20 +296,21 @@ $footer-color: #353535;
 
 @media (min-width: 1024px) {
     .blocfonction {
-        width: 100%;
+        width: 92%;
         margin-left: 8%;
 
         &__flex {
             display: flex;
             flex-direction: row;
-            gap: 50px;
+            gap: 20px;
+            width: 100%;
 
             & .contain {
-                width: 25%;
+                width: 30%;
             }
 
             &__bordure {
-                width: 90%;
+                width: 85%;
                 font-size: 0.9em;
             }
         }
@@ -315,16 +319,18 @@ $footer-color: #353535;
 
 @media (min-width: 1300px) {
     .blocfonction {
-        width: 100%;
+        width: 92%;
         margin-left: 8%;
 
         &__flex {
             display: flex;
             flex-direction: row;
-            gap: 60px;
+            gap: 10px;
+            width: 90%;
+            justify-content: space-between;
 
             & .contain {
-                width: 25%;
+                width: 30%;
             }
 
             &__number {

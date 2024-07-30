@@ -62,7 +62,16 @@ body {
         display: flex;
         justify-content: center;
         font-family: shrikhand;
-        font-size: 1em;
+
+        & h1 {
+            font-size: 1.4em;
+        }
+
+        .coeurs {
+            margin-top: 17px;
+            margin-left: 10px;
+        }
+
     }
 
     & h2 {
@@ -94,25 +103,30 @@ body {
 
         &__description {
             margin-top: -5px;
-            width: 100%;
+            width: 70%;
 
             & .card-title {
                 margin-top: 15px;
-                position: absolute;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(100% - 35px);
+                width: 100%;
 
+                & :hover {
+                    width: calc(100% - 200px);
+                }
             }
 
             & .card-subtitle {
-                margin-top: 40px;
-                font-size: 1em;
+                margin-top: -15px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(100% - 35px);
+                width: 100%;
+
+                & :hover {
+                    width: calc(100% - 250px);
+                }
             }
         }
 
@@ -130,7 +144,7 @@ body {
         }
 
         &:hover &__flex {
-            margin-right: 0;
+            margin-right: 0px;
             transition: 1s;
         }
     }
@@ -152,14 +166,10 @@ body {
 }
 
 /* Partie coeurs */
-.coeurs {
-    margin-top: 17px;
-    margin-left: 10px;
-}
 
 .buttonheart {
     font-size: 30px;
-    // position: absolute;
+    position: absolute;
     border: none;
     transition-property: all;
     transition-duration: 2s;
